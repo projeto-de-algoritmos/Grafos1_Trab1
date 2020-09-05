@@ -8,7 +8,7 @@
 |Matrícula | Aluno |
 | -- | -- |
 | 17/0080366  |  Moacir Mascarenha |
-| xx/xxxxxx  |  Marcos Adriano Nery |
+| 15/0062567  |  Marcos Adriano Nery |
 
 ## Sobre 
 O algoritmo é capaz de solucionar sudoku que o usuário der de entrada, utilizando conhecimento adquirido na disciplina.
