@@ -31,6 +31,30 @@ class Vertice:
         return self.vizinhos
 
 
+class Grafo:
+    def __init__(self):
+        self.vertices = []
+        self.numeroDeVertices = 0
+    
+    def add_vertice(self, vertice):
+        self.vertices.append(vertice)
+        self.numeroDeVertices +=1
+    
+    def add_vizinho_do_vertice(self, vertice_posicao ,vizinho):
+        # print("vis")
+        if(vertice_posicao != vizinho):
+            self.vertices[vertice_posicao].add_vizinho(vizinho)
+            self.vertices[vizinho].add_vizinho(vertice_posicao)
 
+    
+    def rm_vizinho_do_vertice(self, vertice_posicao ,vizinho):
+        self.vertices[vertice_posicao].rm_vizinho(vizinho)
+    
+    def imprime_vertices(self):
+        i = 0
+        for no in self.vertices:
+            print(str(no.imprime_visinhos()) + str(i))
+            i+=1
+            
 
 
