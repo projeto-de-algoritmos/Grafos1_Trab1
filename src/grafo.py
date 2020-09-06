@@ -35,13 +35,13 @@ class Grafo:
     def __init__(self):
         self.vertices = []
         self.numeroDeVertices = 0
+        self.preenchidos = 0
     
     def add_vertice(self, vertice):
         self.vertices.append(vertice)
         self.numeroDeVertices +=1
     
     def add_vizinho_do_vertice(self, vertice_posicao ,vizinho):
-        # print("vis")
         if(vertice_posicao != vizinho):
             self.vertices[vertice_posicao].add_vizinho(vizinho)
             self.vertices[vizinho].add_vizinho(vertice_posicao)
@@ -55,6 +55,21 @@ class Grafo:
         for no in self.vertices:
             print(str(no.imprime_visinhos()) + str(i))
             i+=1
+    
+    def imprime_tabela(self):
+        if(self.preenchidos == 81):
+            print("##################### SOLUCAO ####################")
+            j=0
+            for vertice in self.vertices:    
+                print(vertice.numero, end="\t")
+                if j in [8,17,26,35,44,53,62,71]:
+                    print()
+                j+=1
+
+        else:
+            print("ERRO: NAO FOI POSSIVEL RESOLVER")
+            
+        print()
             
 
 
