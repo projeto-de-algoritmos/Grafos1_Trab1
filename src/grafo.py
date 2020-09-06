@@ -5,7 +5,7 @@ class Vertice:
         self.numero = numero
         self.visitado = False
         self.vizinhos = []
-        self.cores = []
+        # self.cores = []
         self.pai = None
         self.estado = False
 
@@ -13,19 +13,35 @@ class Vertice:
         if( (vizinho in self.vizinhos) == False):
             self.vizinhos.append(vizinho)
         else:
-            print("Este vizinho JA existe!")
+            pass
+    
+    def rm_cor(self, cor):
+        if cor in self.numero:
+            self.numero.remove(cor)
+        else:
+            pass
+    
+    def quantidade_numeros(self):
+        return len(self.numero)
 
     def rm_vizinho(self, vizinho):
         if( (vizinho in self.vizinhos) == True):
             self.vizinhos.remove(vizinho)
         else:
-            print("Este vizinho NAO  existe!")
+            pass
     
     def add_estado(self, estado):
         self.estado = estado
 
     def add_visitado(self):
         self.visitado = True
+    
+    def rm_numero(self, numero):
+        if numero in self.numero:
+            self.numero.remove(numero)
+        else:
+           
+            pass
     
     def imprime_visinhos(self):
         return self.vizinhos
