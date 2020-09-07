@@ -12,7 +12,6 @@ import os
 #   VOLTA O DIRETORIO
 #   ------------------------------------------------------------
 sys.path.append(os.path.join(os.path.dirname(__file__), "../"))
-
 import src.functios_sudoku  as funcSud
 
 #   ------------------------------------------------------------
@@ -36,46 +35,34 @@ def findNextCellToFill(grid, i, j):
 #   E CADA BOX. NA CHAMADA DO BOX OCORRE A CHAMADA DAS BUSCAS
 #   ------------------------------------------------------------
 def resolve(grid, i=0, j=0, busca = 'largura'):
-
     printa = 0
     if printa == 1:
         if i == 0 and j==0:
             printsudoku(grid)
         print("Init ==> I:", i, " - - J:", j)
         printsudoku(grid)
-
     i, j = findNextCellToFill(grid, i, j)
-
     if printa == 1:
         print("Find ==> I:", i, " - - J:", j)
         printsudoku(grid)
-
     if i == -1:
         return True
     for e in range(1, 10):
-
         #   ------------------------------------------------------------
         #   inspeciona a linha e coluna referente a posiçao que está
         #   ------------------------------------------------------------
         if funcSud.inspecionaLinCol(grid, i, j, e):
-
             #   ------------------------------------------------------------
             #   inspeciona o BOX referente a posiçao que está alem de
             #   definir qual busca será usado para tal
             #   ------------------------------------------------------------
             if funcSud.inspecionaBox(grid, i, j, e, busca):
-
                 grid[i][j] = e
-
                 if resolve(grid, i, j):
-
                     if len(grid) - 1 == i:
                         print(j)
-
                     return True, grid
-
                 grid[i][j] = 0
-
     return False
 
 #   ------------------------------------------------------------
