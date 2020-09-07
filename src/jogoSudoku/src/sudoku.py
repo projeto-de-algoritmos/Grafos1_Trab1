@@ -8,6 +8,8 @@ Created on September 2020
 
 import sys
 import os
+import numpy as np
+
 #   ------------------------------------------------------------
 #   VOLTA O DIRETORIO
 #   ------------------------------------------------------------
