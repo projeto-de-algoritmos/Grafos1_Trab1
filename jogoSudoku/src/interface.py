@@ -161,7 +161,10 @@ class Menu:
     def __init__(self):
         print("     BEM VINDO!")
         print("     INSIRA UM SUDOKU VALIDO!")
-        input("Pressione qualquer tecla para continuar: ")
+        print("DIGITE PARA BUSCA:")
+        print("1 LARGURA")
+        print("2 PROFUNDIDADE")
+        self.busca = input(" ")
         self.COR_DE_FUNDO = (255,255,255)
         self.LARGURA = 540
         pygame.init()

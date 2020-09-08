@@ -48,7 +48,7 @@ def resolve(grid, i=0, j=0, busca = 'largura'):
         print("Find ==> I:", i, " - - J:", j)
         printsudoku(grid)
     if i == -1:
-        return True
+        return True, grid
     for e in range(1, 10):
         #   ------------------------------------------------------------
         #   inspeciona a linha e coluna referente a posiçao que está
