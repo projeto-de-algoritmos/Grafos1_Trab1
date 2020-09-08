@@ -60,6 +60,9 @@ Sudoku, por vezes escrito Su Doku é um jogo baseado na colocação lógica de n
 > pip3 install -r requirements.txt --user
 
 ## Uso
+### Link para video:
+
+> https://www.dropbox.com/s/17qgoi084b00xjb/fascinatingindicesjokewearily%20on%202020-09-08%2002-26.mp4?dl=0
 
 ### Rodar a Aplicação
 
